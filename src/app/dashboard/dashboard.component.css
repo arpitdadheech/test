@@ -1,0 +1,36 @@
+.dashboard-container {
+    padding: 30px;
+}
+
+.dashboard-container ul {
+    margin: 0;
+    padding: 0;
+    display: table;
+}
+
+.dashboard-container ul li {
+    list-style: none;
+    display: table-row;
+}
+
+.dashboard-container ul li span {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 10px 15px;
+    vertical-align: middle;
+}
+
+.dashboard-container ul li span:first-child {
+    border-right: 0;
+    font-weight: bold;
+}
+
+.filter-container {
+    padding: 20px 0;
+}
+
+.filter-container select {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    margin-left: 10px;
+}

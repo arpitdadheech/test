@@ -1,0 +1,54 @@
+<div class="dashboard-container">
+
+    <div class="filter-container">
+        <select [(ngModel)]="insuredType" (change)="selectInsuredType()" name="first">
+          <option value="insured" selected>insured</option>
+         <option value="uninsured">uninsured</option>
+       </select>
+        <select [(ngModel)]="ageType" (change)="selectAgeType()" name="age">
+      <option value="all" selected>All</option>
+      <option value="0 to 64 years" selected> 0 - 64</option>
+      <option value="18 to 64 years">18-64</option>
+    </select>
+        <select [(ngModel)]="sexType" (change)="selectsexType()" name="sex">
+      <option value="all" selected>All</option>
+
+      <option value="M" selected> Male</option>
+      <option value="F">Female</option>
+    </select>
+        <select [(ngModel)]="RIPType" (change)="selectRIPType()" name="RIP">
+      <option value="all" selected>All</option>
+
+      <option value="under 1.38" selected> 0 - 138%</option>
+      <option value="1.38 to 1.99" selected> 138% - 199%</option>
+      <option value="2.00" selected> Over 200%</option>
+    </select>
+        <select [(ngModel)]="raceType" (change)="selectRaceType()" name="Race">
+      <option value="all" selected>All</option>
+
+      <option value="white" selected>white</option>    
+      <option value="Black or African American" selected>Black or African American</option>    
+      <option value="American Indian and Alaska Native" selected>American Indian and Alaska Native</option>    
+      <option value="Asian" selected>Asian</option>    
+      <option value="Native Hawaiian and Other Pacific Islander" selected>Native Hawaiian and Other Pacific Islander</option>    
+      <option value="Some other race" selected>Some other race</option>    
+      <option value="Two or more races" selected>Two or more races</option>    
+      <option value="White, not Hispanic or Latino" selected>White, not Hispanic or Latino</option>    
+      <option value="Hispanic or Latino (of any race)" selected>Hispanic or Latino (of any race)</option>    
+          
+    </select>
+    </div>
+    <ul>
+
+        <ng-container *ngFor="let key of tableDataKeys">
+            <li>
+                <span>
+          {{key}}
+        </span>
+                <span>
+          {{getSum(key)}}
+        </span>
+            </li>
+        </ng-container>
+    </ul>
+</div>
