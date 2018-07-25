@@ -1,6 +1,10 @@
-# ArpitSirProject
+# Arpit Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+
+## Installation
+
+Run 'npm install'.
 
 ## Development server
 
