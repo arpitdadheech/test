@@ -1,1 +1,403 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+/* @import '~font-awesome/css/font-awesome.css'; */
+
+.no-touch .scrollable.hover {
+	overflow-y:hidden;
+}
+.no-touch .scrollable.hover:hover {
+    overflow-y:auto;
+	overflow:visible;
+}
+@media (min-width: 1200px) {
+  	.container {
+      	width: 1368px;
+  	}
+  	.tooltip .tooltiptext {
+  		width: fit-content;
+  	}
+}
+@media (max-width: 1200px) {
+  	.tooltip .tooltiptext {
+  		width: fit-content !important;
+  		top: -240px !important;
+  	}
+}
+@media (max-width: 414px) {
+	.container-fluid {
+		padding: 45px 15px 60px 114px !important;
+	}
+	.navbar-brand img:nth-child(1) {
+		width: 45px !important;
+		margin-top: 0 !important;
+	}
+	.navbar-brand img:nth-child(2) {
+		width: 185px !important;
+	}
+    .navbar-brand .header-text {
+        font-size: 14px !important;
+        margin: 16px 0 16px 42px !important;
+    } 
+	.sidenav {
+		padding-top: 49px !important;
+		width: 96px !important;
+	}
+	.sidenav-list img {
+		margin-left: 0 !important;
+	}
+}
+
+/*TOP BAR*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+.navbar {
+    margin-bottom: 0 !important;
+}
+.navbar-inverse {
+  	background-color: #8DC53E !important;
+    border-color: #8DC53E !important;
+}
+.navbar-brand {
+	padding: 28px 35px;
+	float: none;
+}
+.navbar-brand img:nth-child(1){
+	width: 90px;
+	margin-top: -18px;
+	display: inline-block !important;
+}
+.navbar-brand img:nth-child(2){
+    width: 327px;
+   margin: 7px 0 0 17px;
+   display: inline-block;
+}
+.navbar-brand .header-text{
+	margin: 25px 0 21px 42px;
+    display: inline-block;
+    font-size: 29px;
+    display: inline-block !important;
+    color: #fff;
+}
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0 !important;
+    }
+}
+
+/*SIDE-BAR*/
+.sidenav {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #646464;
+    overflow-x: hidden;
+    padding-top: 65px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.sidenav a {
+    color: #fff !important;
+}
+.sidenav-list {
+	padding: 18px 15px;
+	border-left: 6px solid #646464;
+}
+.sidenav-list img {
+	padding: 0 12px 0;
+	margin-left: 35px;
+	display: block;
+	height: 29px;
+}
+
+/* .change-password {
+	background: url('assets/images/change_off.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-change-password:hover {
+	border-left-color: #72246C;
+}
+/* .sidenav-list-change-password1 .change-password1 {
+	background: url('assets/images/change_on.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-change-password1 {
+	border-left-color: #72246C;
+	background: #fff;
+	color: #000;
+}
+
+/* .forgot-password {
+	background: url('assets/images/forgot_off.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-forgot-password:hover {
+	border-left-color: #0080A3;
+}
+/* .sidenav-list-forgot-password1 .forgot-password1 {
+	background: url('assets/images/forgot_on.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-forgot-password1 {
+	border-left-color: #0080A3;
+	background: #fff;
+	color: #000;
+}
+
+/* .unlock-account {
+	background: url('assets/images/unlock_off.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-unlock-account:hover {
+	border-left-color: #FFA500;
+}
+/* .sidenav-list-unlock-account1 .unlock-account1 {
+	background: url('assets/images/unlock_on.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-unlock-account1 {
+	border-left-color: #FFA500;
+	background: #fff;
+	color: #000;
+}
+
+/* .password-help {
+	background: url('assets/images/help_off.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-password-help:hover {
+	border-left-color: #8DC53E;
+}
+/* .sidenav-list-password-help1 .password-help1 {
+	background: url('assets/images/help_on.png');
+	background-repeat: no-repeat;
+} */
+.sidenav-list-password-help1 {
+	border-left-color: #8DC53E;
+	background: #fff;
+	color: #000;
+}
+
+
+
+/*BODY*/
+.container-fluid {
+    padding: 70px 15px 60px 180px;
+}
+
+/*WELCOME*/
+.welcome-page .row {
+	padding: 33px 0 6px;
+}
+.welcome-page span {
+	display: block;
+}
+
+/*CHANGE-PASSWORD*/
+
+
+/*FORGOT-PASSWORD*/
+
+
+/*UNLOCK-PASSWORD*/
+
+
+/*HELP*/
+.pd-15 {
+    padding: 15px;
+    border: 1px solid #c5c5c5;
+}
+.fa-caret-down, .fa-caret-right {
+    color: #4A4A4A;
+    float: left;
+    margin: -12px 26px 0 12px;
+}
+.list-group-item {
+	border-color: #c5c5c5;
+	font-size: 16px;
+	background-color: #ddd;
+}
+
+/*RESET-PASSWORD*/
+
+
+/*COMMON-FOR-PAGES*/
+@font-face {
+	font-family: 'Titillium Web';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+a:hover,a:focus {
+	text-decoration:none;
+}
+ul,li {
+	list-style-type: none;
+}
+nav {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
+nav ul,nav li {
+	outline:0;
+	margin:0;
+	padding:0;
+}
+.mrb-15 {
+	margin-bottom: 15px;
+}
+.change-password .alert, .forgot-password .alert, .reset-password .alert, .unlock-account .alert {
+	margin-bottom: 0;
+	padding: 5px;
+}
+.box-alert {
+	height: 100%;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.78);
+    padding:0;
+    margin:0;
+    border:0;
+    position:fixed;
+    overflow:hidden;
+    left:0px;
+    z-index: 1005;
+    top:0px;
+    display:block;
+}
+.box-alert .alert {
+	margin-top: 80px;
+	padding: 10px;
+}
+.box-alert-small .alert {
+	padding: 10px;
+}
+.box-alert .btn {
+	margin: -2px;
+}
+.box-alert .fa, .box-alert-small .fa {
+	font-size: 22px !important;
+}
+.box-alert span, .box-alert-small span {
+	font-size: 15px;
+	margin-left: 15px;
+}
+.backdrop {
+	position: fixed !important;
+}
+.spinner-three-bounce {
+	position: fixed !important;
+}
+.color-blue {
+    color: #0187be;
+}
+.color-red {
+    color: red;
+}
+.font-weight-bold {
+    font-weight: bold;
+}
+.font-style-italic {
+    font-style: italic;
+}
+.top-margin {
+	margin-top: 50px;
+}
+.form-actions {
+	padding: 20px 0;
+    margin: 0;
+}
+.btn {
+	background: #9B9B9B;
+	border: none;
+	font-weight: bold;
+}
+.btn-primary, .btn-primary[disabled] {
+	background: #8DC53E;
+}
+.btn-primary:hover, .btn-primary[disabled]:hover {
+	background: #639221;
+}
+label {
+	font-weight: 200;
+}
+
+/*TOOL-TIP*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    margin-top: 6px;
+    z-index: 500;
+    font-size: 20px;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 473px;
+    background-color: black;
+    color: #fff;
+    border-radius: 6px;
+    padding: 37px 19px 0 0;
+    position: absolute;
+    z-index: 1;
+    top: -58px;
+    left: 142%;
+    font-size: 13px;
+}
+
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+ul.tooltiptext-ordered-list {
+	margin-top: -30px;
+
+}
+.tooltiptext-ordered-list li {
+	list-style-type: circle;
+}
+
+/*FOOTER*/
+#footer {
+  	padding: 8px 0px 0px !important;
+    font-size: 12px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: block;
+    background: #63656b;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0!important;
+    z-index: 999;
+}
+#footer a {
+	color: #fff;
+}
+#footer a:hover {
+	text-decoration: underline;
+}

@@ -1,4 +1,5 @@
-<div class="dashboard-container">
+<app-side-nav></app-side-nav>
+<div class="dashboard-container" style="width: 80%;float: left;margin-top: 100px;margin-left: 20%;">
 
     <div class="filter-container">
         <select [(ngModel)]="insuredType" (change)="selectInsuredType()" name="first">
@@ -38,16 +39,16 @@
           
     </select>
     </div>
+    
     <ul>
-
-        <ng-container *ngFor="let key of tableDataKeys">
+      <ng-container *ngFor="let key of tableDataKeys">
             <li>
                 <span>
-          {{key}}
-        </span>
+                    {{key}}
+                </span>
                 <span>
-          {{getSum(key)}}
-        </span>
+                    {{getSum(key)}}
+                 </span>
             </li>
         </ng-container>
     </ul>

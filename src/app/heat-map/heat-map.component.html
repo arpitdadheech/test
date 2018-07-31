@@ -1,0 +1,33 @@
+<app-side-nav></app-side-nav>
+  
+
+
+<div class="heatMap-container" style="width: 80%;float: left;margin-top: 100px;margin-left: 20%;">
+    <select [(ngModel)]="changeType" (change)="onSelect()" name="change">
+        <option value="all" selected>All</option>
+        <option value="insured" selected>insured</option>
+        <option value="uninsured">uninsured</option>
+        <option value="0 to 64 years" selected> 0 - 64</option>
+        <option value="18 to 64 years">18-64</option>
+        <option value="M" selected> Male</option>
+        <option value="F">Female</option>
+        <option value="1.38 to 1.99" selected> 138% - 199%</option>
+        <option value="2.00" selected> Over 200%</option>
+      </select>
+      
+        <ngx-charts-heat-map
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="multi"
+        [legend]="showLegend"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)">
+      </ngx-charts-heat-map>
+
+</div>

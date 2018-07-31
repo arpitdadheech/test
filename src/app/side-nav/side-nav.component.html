@@ -1,0 +1,41 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse" (click)="changeIcon('')">
+    <h1>Demo Project</h1>
+</nav>
+
+<nav class="sidenav">
+  <ul *ngIf="showDefaultIcons">
+      <a [routerLink]="['../dashboard']" (click)="changeIcon('changePassword')">
+          <li class="sidenav-list" [ngClass]="{'sidenav-list-change-password1':changePassword == true, 'sidenav-list-change-password':changePassword == false}">
+             
+              <i style="font-size: 30px; margin-left: 25px;" class="fa fa-home"></i>
+              <div class="nav-text">
+                  Dashboard
+              </div>
+          </li>
+      </a>
+      <a [routerLink]="['../user']" (click)="changeIcon('forgotPassword')">
+          <li class="sidenav-list" [ngClass]="{'sidenav-list-forgot-password1':forgotPassword == true, 'sidenav-list-forgot-password':forgotPassword == false}">
+             <i style="font-size: 30px; margin-left: 25px;" class="fa fa-users"></i>
+              <div class="nav-text">
+                 User
+              </div>
+          </li>
+      </a>
+      <a [routerLink]="['../setting']" (click)="changeIcon('unlockAccount')">
+          <li class="sidenav-list" [ngClass]="{'sidenav-list-unlock-account1':unlockAccount == true, 'sidenav-list-unlock-account':unlockAccount == false}">
+              <i style="font-size: 30px; margin-left: 25px;" class="fa fa-cogs"></i>
+              <div class="nav-text">
+                Settings
+              </div>
+          </li>
+      </a>
+      <a [routerLink]="['../heatMap']" (click)="changeIcon('passwordHelp')">
+          <li class="sidenav-list" [ngClass]="{'sidenav-list-password-help1':passwordHelp == true, 'sidenav-list-password-help':passwordHelp == false}">
+              <i style="font-size: 30px; margin-left: 25px;" class="fa fa-map-o"></i>
+              <div class="nav-text">
+                  Heat Map
+              </div>
+          </li>
+      </a>
+  </ul>
+</nav>

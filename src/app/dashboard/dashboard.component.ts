@@ -1,5 +1,7 @@
 import { DataCaService } from './../services/data-ca.service';
 import { Component, OnInit } from '@angular/core';
+import { OrderBy } from "../order-by.pipe";
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +12,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private dataCallSerive: DataCaService) { }
 
+  sortingLocationField: string = 'loc_name';
   tableData: any;
   prisrineTableDataKeys: any;
   tableDataKeys: any;
@@ -20,6 +23,8 @@ export class DashboardComponent implements OnInit {
   raceType: any;
   selectedFilters: any;
   onceFiltered: boolean;
+  sortingField: string = 'loc_name';
+  column = 'key';
   ngOnInit() {
     // this.dataCallSerive.getData().subscribe(data => {
     //   console.log(data);
@@ -28,10 +33,33 @@ export class DashboardComponent implements OnInit {
     this.dataCallSerive.trying();
     this.dataCallSerive.getJSONDATA().subscribe(data => {
       this.tableData = data;
+      
       this.prisrineTableDataKeys = Object.keys(data[0]);
       this.tableDataKeys = Object.keys(data[0]);
     });
   }
+
+  customSort(event) {
+    event.data.sort((data1, data2) => {
+        let value1 = data1[event.field];
+        let value2 = data2[event.field];
+        let result = null;
+
+        if (value1 == null && value2 != null)
+            result = -1;
+        else if (value1 != null && value2 == null)
+            result = 1;
+        else if (value1 == null && value2 == null)
+            result = 0;
+        else if (typeof value1 === 'string' && typeof value2 === 'string')
+            result = value1.localeCompare(value2);
+        else
+            result = (value1 < value2) ? -1 : (value1 > value2) ? 1 : 0;
+
+        return (event.order * result);
+    });
+}
+
   getSum(key) {
     let sum = 0;
     for (const element of this.tableData) {
@@ -51,7 +79,6 @@ export class DashboardComponent implements OnInit {
   }
 
   selectInsuredType() {
-    console.log(this.insuredType);
     this.tableDataKeys = [];
     if (this.ageType === 'all') {
       this.tableDataKeys = this.prisrineTableDataKeys;
@@ -163,4 +190,17 @@ export class DashboardComponent implements OnInit {
     }
 
   }
+
+
+  toggleGroupSort(field: string){
+    console.log(field);
+  if(field == 'loc_name'){
+    this.sortingLocationField = '-loc_name';
+  } else {
+    this.sortingLocationField = 'loc_name';
+  }
+
+};
+
+
 }

@@ -1,0 +1,49 @@
+<app-side-nav></app-side-nav>
+<div class="settings-container" style="width: 80%;float: left;margin-top: 100px;margin-left: 20%;">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <legend>User Settings</legend>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>Settings</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">  Users enabled </label>
+                        </div>
+                        
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Anyone can register </label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">  Users need to validate their account </label>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-md-3">
+                        <h5>  Username blacklist</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <ul class="list-inline">
+                            <li><input id="fname" name="First Name" class="form-control input-sm" placeholder="*" type="text"></li>
+                            <li>List of terms not allowed in usernames, separated by commas</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                
+                <div class="row">
+                    <div class="col-md-3">
+                        
+                    </div>
+                    <div class="col-md-9">
+                        <button type="button" class="btn btn-primary" (click)="saveChanges()">Save Changes</button>
+                    </div>
+                </div>
+                
+            </div>
+</div>
